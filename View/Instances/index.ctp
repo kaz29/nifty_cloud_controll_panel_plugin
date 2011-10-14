@@ -1,13 +1,13 @@
 <div class="instances index">
-	<h2><?php __('Instances');?></h2>
+	<h2><?php echo __('Instances');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php __('Instance Id');?></th>
-			<th><?php __('Instance Type');?></th>
-			<th><?php __('OS Image');?></th>
-			<th><?php __('Status');?></th>
-			<th><?php __('Launch Time');?></th>
-			<th class="actions"><?php __('Actions');?></th>
+			<th><?php echo __('Instance Id');?></th>
+			<th><?php echo __('Instance Type');?></th>
+			<th><?php echo __('OS Image');?></th>
+			<th><?php echo __('Status');?></th>
+			<th><?php echo __('Launch Time');?></th>
+			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
 	<?php
 	$i = 0;
@@ -23,7 +23,7 @@
 		<td><?php if ( array_key_exists($instance['Instance']['image_id'], $images)):
 					echo $images[$instance['Instance']['image_id']]; 
 				else:
-					echo "Unknown";
+					echo __("Unknown");
 				endif;?>&nbsp;</td>
 		<td><?php echo $instance['Instance']['status']; ?>&nbsp;</td>
 		<td><?php echo $instance['Instance']['launch_time']; ?>&nbsp;</td>
