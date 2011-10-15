@@ -1,5 +1,5 @@
 <?php
-require_once(ROOT.DS.'vendors'.DS.'niftycloud'.DS.'services'.DS.'niftycloud.class.php');
+require_once(ROOT.DS.'vendors'.DS.'NiftyCloud'.DS.'services'.DS.'niftycloud.class.php');
 
 class Instance extends AppModel {
 	public $useTable = false;
