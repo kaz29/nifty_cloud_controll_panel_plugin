@@ -32,9 +32,12 @@
 				switch($instance['Instance']['status']){
 				case 'running':
 					echo $this->Html->link(__('Stop', true), array('action' => 'stop', $instance['Instance']['id']));
+					echo $this->Html->link(__('Change Attr', true), array('action' => 'attr', $instance['Instance']['id']));
 					break ;
 				case 'stopped':
 					echo $this->Html->link(__('Start', true), array('action' => 'start', $instance['Instance']['id']));
+					echo $this->Html->link(__('Terminate', true), array('action' => 'terminate', $instance['Instance']['id']));
+					echo $this->Html->link(__('Change Attr', true), array('action' => 'attr', $instance['Instance']['id']));
 					break ;
 				}
 			?>
@@ -42,4 +45,11 @@
 	</tr>
 <?php endforeach; ?>
 	</table>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+
+		<li><?php echo $this->Html->link(__('Create Instances', true), array('action' => 'run'));?></li>
+	</ul>
 </div>
